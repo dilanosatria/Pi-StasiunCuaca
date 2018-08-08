@@ -1,0 +1,181 @@
+/*Untuk floating diatas google maps*/
+#wrapper { position: relative; }
+#over_map { position: absolute; top: 125px; right: 10px; z-index: 99; }
+
+.textsidebar{
+    font-weight: bolder;
+    margin-bottom: 0px;
+    margin-top: 16px;
+}
+
+.textsidebar2{
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+.peta{
+    visibility: visible; 
+    width: 100%;
+    height: 860px; 
+    padding-top: 50px; 
+    padding-bottom: 10px;
+}
+
+#tombolcollapse{
+    position: absolute;
+    right: 10px;
+}
+
+.kartuinformasi{
+    position: absolute;
+    right: 10px;
+}
+
+.kartuinformasi-body{
+    padding: 0px;
+}
+
+.kartuinformasi-card{
+    width: 18rem;
+}
+
+.portfolio{
+    padding-top: 25px;
+}
+
+.judulbagian{
+    padding-bottom: 15px;
+}
+
+.judul-gaugemeter-sub{
+    padding-bottom: 5px;
+}
+
+.judul-gaugemeter-sub-sub{
+    padding-bottom: 30px;
+}
+
+.judul-gauge{
+    padding-bottom: 0px; 
+    margin-bottom: 0px;
+}
+
+.pesankesalahan-gauge{
+    visibility: visible; 
+    width: 350px; 
+    height: 270px;
+}
+
+.bagian{
+    padding-top: 50px;
+}
+
+.judultentang{
+    padding-bottom: 50px;
+}
+
+.hitungberita{
+    float: right;
+    margin-bottom: -10px;
+    margin-left: 2px;
+}
+
+#komentar
+{
+    padding-bottom: 0px;
+    padding-top: 30px;
+}
+
+.judul-komentar-sub{
+    padding-bottom: 35px;
+}
+
+.biru{
+    color: #1E75AA;
+}
+
+.bg-komentar{
+	background-color: #1e75aa1f;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 10px;
+}
+
+.bg-komentar-nama{
+    color: #1E75AA; 
+    margin-left: 75px; 
+    margin-top: 10px;
+}
+
+.intromodal{
+    padding-bottom: 10px;
+}
+
+.kesalahancaptcha{
+    color: red;
+}
+
+.iframecuaca{
+    border-width: 0px solid #cccccc;
+}
+
+.bg-komentar-pesan{
+    word-wrap: break-word; 
+    margin-left:75px;
+}
+
+.btn-outline-biru {
+    color: #1E75AA;
+    background-color: transparent;
+    background-image: none;
+    border-color: #1E75AA;
+}
+
+.btn-outline-biru:hover {
+    color: #ffffff;
+    background-color: #1E75AA;
+    background-image: none;
+    border-color: #1E75AA;
+}
+
+.text-biru {
+    color: #1E75AA;
+}
+
+/* Modal */
+@media screen and (min-width: 992px) {
+    .modal-lg {
+        width: 950px;
+    }
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 32.5px;
+    height: 65px;
+    font-size: 1.8rem;
+    color:#1E75AA;
+    line-height: 65px;
+    border-radius: 32.5px;
+    background-color: #ffffff;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -32.5px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.page-link{
+    color: #1E75AA!important;
+}
+
+.badge-biru {
+    color: #fff;
+    background-color: #1E75AA;
+}

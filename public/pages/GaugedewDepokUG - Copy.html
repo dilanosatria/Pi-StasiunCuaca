@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div id="container">
+        <p id="date" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>   
+        <p id="time" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>     
+        <p id="data-1" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-2" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-3" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-4" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-5" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-6" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-7" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+        <p id="data-8" class="card-text text-dark">Pilih Stasiun Cuaca Terlebih Dahulu</p>
+      </div>
+
+    <button type="button" onclick="initChart();">refresh</button>
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+
+function test(){
+  // initChart();
+  //google.setOnLoadCallback(initChart);
+    }
+
+  var channel_id = 463743;
+  var api_key = 'B7028Y345YGDNHLT';
+ 
+  function initChart() {
+      
+               
+    loadData();
+
+    // load new data every 15 seconds
+    setInterval('loadData()', 15000);
+  }
+
+
+  function loadData() {
+    // variable for the data point
+    var p;
+
+    // get the data from thingspeak
+    $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/feed/last.json?api_key=' + api_key, function(data) {
+
+      // get the data point
+      date = data.created_at;
+      p = data.field1;
+      p2 = data.field2;
+      p3 = data.field3;
+      p4 = data.field4;
+      p5 = data.field5;
+      p6 = data.field6;
+      p7 = data.field7;
+      p8 = data.field8;
+
+      if (p) {
+        
+        document.getElementById("date").innerHTML = date.slice(0, 10);
+        document.getElementById("time").innerHTML = date.slice(11, 19);
+        document.getElementById("data-1").innerHTML = p;
+        document.getElementById("data-2").innerHTML = p2;
+        document.getElementById("data-3").innerHTML = p3;
+        document.getElementById("data-4").innerHTML = p4;
+        document.getElementById("data-5").innerHTML = p5;
+        document.getElementById("data-6").innerHTML = p6;
+        document.getElementById("data-7").innerHTML = p7;
+        document.getElementById("data-8").innerHTML = p8;
+      }
+
+    });
+    
+  }
+</script>
+
+</body>
+</html>
